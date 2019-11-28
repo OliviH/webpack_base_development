@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu.woff2") format("woff2"); // adapter l'url en fonction du nom de votre fichier
+}
+$font-stack: Ubuntu, Helvetica, sans-serif;
+$primary-color: blue;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  &:fullscreen {
+	background-color: red; // propriété CSS peu supportée par les navigateurs qui devrait être auto-préfixée en mode production
+  }
+  &:hover{
+      background-color: blue;
+      color: wheat;
+  }
+}
